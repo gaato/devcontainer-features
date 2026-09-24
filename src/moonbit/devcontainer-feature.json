@@ -1,0 +1,35 @@
+{
+    "id": "moonbit",
+    "version": "1.0.0",
+    "name": "MoonBit",
+    "description": "Installs the MoonBit toolchain (moon, moonc, moonrun, and the core library) from upstream binaries.",
+    "documentationURL": "https://github.com/gaato/devcontainer-features/tree/main/src/moonbit",
+    "licenseURL": "https://github.com/gaato/devcontainer-features/blob/main/LICENSE.md",
+    "keywords": ["moonbit", "moon"],
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": ["latest", "nightly"],
+            "default": "latest",
+            "description": "latest, nightly, or an exact upstream version such as 0.10.14+7d59c7ec9"
+        },
+        "installNativeDeps": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install gcc and libc headers for the native backend"
+        }
+    },
+    "containerEnv": {
+        "MOON_HOME": "/usr/local/moon",
+        "PATH": "/usr/local/moon/bin:${PATH}"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": ["moonbit.moonbit-lang"]
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/node"
+    ]
+}

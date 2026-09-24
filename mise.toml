@@ -1,0 +1,2 @@
+[tools]
+"npm:@devcontainers/cli" = "0.89.0"

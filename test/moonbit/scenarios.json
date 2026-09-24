@@ -1,0 +1,71 @@
+{
+    "trixie": {
+        "image": "debian:trixie",
+        "features": {
+            "moonbit": {}
+        }
+    },
+    "bookworm": {
+        "image": "debian:bookworm",
+        "features": {
+            "moonbit": {}
+        }
+    },
+    "ubuntu": {
+        "image": "ubuntu:24.04",
+        "features": {
+            "moonbit": {}
+        }
+    },
+    "fedora": {
+        "image": "fedora:43",
+        "features": {
+            "moonbit": {}
+        }
+    },
+    "opensuse": {
+        "image": "opensuse/tumbleweed",
+        "features": {
+            "moonbit": {}
+        }
+    },
+    "non_root": {
+        "image": "mcr.microsoft.com/devcontainers/base:trixie",
+        "remoteUser": "vscode",
+        "features": {
+            "moonbit": {}
+        }
+    },
+    "nightly": {
+        "image": "debian:trixie",
+        "features": {
+            "moonbit": {
+                "version": "nightly"
+            }
+        }
+    },
+    "pinned": {
+        "image": "debian:trixie",
+        "features": {
+            "moonbit": {
+                "version": "0.10.14+7d59c7ec9"
+            }
+        }
+    },
+    "no_native_deps": {
+        "image": "debian:trixie",
+        "features": {
+            "moonbit": {
+                "installNativeDeps": false
+            }
+        }
+    },
+    "with_node": {
+        "image": "mcr.microsoft.com/devcontainers/base:trixie",
+        "remoteUser": "vscode",
+        "features": {
+            "ghcr.io/devcontainers/features/node:1": {},
+            "moonbit": {}
+        }
+    }
+}
